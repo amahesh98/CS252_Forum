@@ -136,6 +136,8 @@ div.comments{
     width:760px;
     display:block;
     margin:auto;
+    margin-top:15px;
+    border-radius:7px;
 }
 div.comments p.commentsHeader{
     font-family:Arial, Helvetica, sans-serif;
