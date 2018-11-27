@@ -7,8 +7,13 @@ div.wrapper{
 }
 div.left{
     width:400px;
+    display:inline-block;
+    margin:0px;
     /* border:1px solid red; */
 }
 div.right{
     width:800px;
+    display:inline-block;
+    margin:0px;
+    vertical-align: top;
 }

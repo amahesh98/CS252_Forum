@@ -9,7 +9,8 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { QuestionsComponent } from './questions/questions.component'
-import { RegistrationComponent } from './registration/registration.component'
+import { RegistrationComponent } from './registration/registration.component';
+import { SinglePostComponent } from './single-post/single-post.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RegistrationComponent } from './registration/registration.component'
     LoginComponent,
     HeaderComponent,
     QuestionsComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    SinglePostComponent
   ],
   imports: [
     BrowserModule,
