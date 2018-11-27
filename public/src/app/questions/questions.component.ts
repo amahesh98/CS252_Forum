@@ -9,8 +9,8 @@ import { HttpService } from '../http.service';
 export class QuestionsComponent implements OnInit {
 
   constructor(private _httpService:HttpService) {
-    
-   }
+
+  }
 
   ngOnInit() {
   }

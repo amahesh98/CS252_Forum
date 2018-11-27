@@ -1,0 +1,148 @@
+div.postWrapper{
+    padding:1px;
+}
+div.originalPost{
+    background:white;
+    width:730px;
+    display:block;
+    margin:auto;
+    border-radius:5px;
+    border:2px solid maroon;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:8px 15px;
+    margin-top:15px;
+}
+div.originalPost p{
+    margin:0px;
+}
+div.originalPost p.pTitle{
+    font-size: 16pt;
+    font-weight:bold;
+    color:maroon;
+}
+div.originalPost p.pName{
+    color:maroon;
+}
+div.originalPost p.pDate{
+    color:rgb(73, 73, 73);
+    margin-bottom:7px;
+    font-style:italic;
+}
+div.originalPost p.pDesc{
+    font-size:13pt;
+}
+div.originalPost button{
+    background:rgb(66, 66, 255);
+    color:white;
+    font-size:13pt;
+    width:140px;
+    padding-top:4px;
+    padding-bottom:4px;
+    text-align:center;
+    border-radius:5px;
+    float:right;
+    margin-top:8px;
+}
+div.originalPost button:hover{
+    background:rgb(49, 49, 192);
+    color:rgb(192, 189, 189);
+}
+div.originalPost a.pNum{
+    display:inline-block;
+    margin-top:10px;
+    height:30px;
+    text-decoration: none;
+    color:rgb(73, 73, 73);
+}
+div.originalPost a.pNum:hover{
+    text-decoration: underline;
+}
+div.leaveReply{
+    background:maroon;
+    width:730px;
+    display:block;
+    margin:auto;
+    border-radius:5px;
+    padding:8px 15px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top:20px;
+    border:1px solid white;
+}
+div.leaveReply p{
+    color:white;
+    margin:0px;
+    font-size:15pt;
+    font-weight:bold;
+    margin-top:6px;
+}
+div.leaveReply textarea{
+    font-size:12pt;
+    font-family:Arial, Helvetica, sans-serif;
+    width:720px;
+    margin:0px;
+    display:block;
+    margin:auto;
+    resize: none;
+    height:90px;
+    margin-top:10px;
+}
+div.leaveReply button{
+    background:rgb(66, 66, 255);
+    color:white;
+    font-size:13pt;
+    width:140px;
+    padding-top:4px;
+    padding-bottom:4px;
+    text-align:center;
+    border-radius:5px;
+    margin-top:15px;
+    margin-bottom:6px;
+}
+div.leaveReply button:hover{
+    background:rgb(49, 49, 192);
+    color:rgb(192, 189, 189);
+}
+div.leaveReply div{
+    text-align: right;
+}
+div.comment{
+    background:white;
+    width:710px;
+    display:block;
+    margin:auto;
+    border-radius:5px;
+    border:2px solid maroon;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:8px 15px;
+    margin-top:15px;
+}
+div.comment p{
+    margin:0px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+div.comment p.cName{
+    color:maroon;
+    font-size:12pt;
+}
+div.comment p.cDate{
+    font-size:11pt;
+    color:rgb(73, 73, 73);
+    margin-bottom:10px;
+}
+div.comments{
+    max-height:500px;
+    overflow:scroll;
+    background:rgb(208, 208, 255);
+    width:760px;
+    display:block;
+    margin:auto;
+}
+div.comments p.commentsHeader{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:15pt;
+    font-weight:bold;
+    margin:0px;
+    color: maroon;
+    margin-left:20px;
+    margin-top:15px;
+}

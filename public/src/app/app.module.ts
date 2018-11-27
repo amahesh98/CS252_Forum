@@ -23,7 +23,6 @@ import { SinglePostComponent } from './single-post/single-post.component';
     NewQuestionComponent,
     QuestionsComponent,
     SinglePostComponent,
-    
   ],
   imports: [
     BrowserModule,
