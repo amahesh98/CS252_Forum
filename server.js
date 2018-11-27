@@ -14,3 +14,6 @@ app.get('/login', function(request, response){
 app.all("*", function(request, response){
     return response.sendFile(path.resolve('./public/dist/public/index.html'))
 })
+app.listen(8000, function(){
+    console.log("Listening on port 8000")
+})
