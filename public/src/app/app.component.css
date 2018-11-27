@@ -5,3 +5,10 @@ div.wrapper{
     margin:auto;
     padding:1px;
 }
+div.left{
+    width:400px;
+    /* border:1px solid red; */
+}
+div.right{
+    width:800px;
+}
