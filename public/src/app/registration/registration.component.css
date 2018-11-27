@@ -1,5 +1,4 @@
-
-div.loginWrapper{
+div.registrationWrapper{
     background: white;
     padding-top:1px;
     padding-bottom:1px;
@@ -14,7 +13,7 @@ div.loginWrapper{
       margin-top:30px;
   }
 
-  div.loginInputs{
+  div.registrationInputs{
       text-align: center;
   }
 
@@ -33,13 +32,13 @@ div.loginWrapper{
       text-align: center;
       font-style: italic;
   }
-  input.loginBox{
+  input.registrationBox{
       font-size:14pt;
       width:375px;
       margin:10px;
       display:inline-block;
   }
-  button.login{
+  button.register{
       display:block;
       background:white;
       width:300px;
@@ -51,9 +50,18 @@ div.loginWrapper{
       font-size:15pt;
   }
 
-  p.signup{
+  p.login{
       text-align: center;
       text-decoration: underline;
       color: white;
   }
-  
+
+  h1.success{
+      color:green;
+      text-align: center;
+  }
+
+  h1.failure{
+      color:red;
+      text-align:center;
+  }
