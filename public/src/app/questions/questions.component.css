@@ -1,0 +1,76 @@
+div.questionsWrapper{
+    background:rgb(202, 202, 202);
+    padding:1px;
+}
+div.top button{
+    width:60px;
+    background:rgb(66, 66, 255);
+    color:white;
+    font-size:14pt;
+    padding:5px 0px;
+    border-radius:5px;
+}
+div.top input{
+    font-size:13pt;
+    width:300px;
+    border-radius:5px;
+    float:right;
+    margin-top:3px;
+    margin-right:10px;
+}
+div.top{
+    margin-top:7px;
+    margin-left:5px;
+    margin-bottom:0px;
+}
+div.questions{
+    height:700px;
+    overflow:scroll;
+    background:white;
+    margin-top:5px;
+}
+div.question{
+    font-family:Arial, Helvetica, sans-serif;
+    
+    border-bottom:1px solid rgb(61, 61, 61);
+    margin:3px;
+    padding-bottom:2px;
+}
+div.question p{
+    margin:0px;
+}
+div.question p.qTitle{
+    font-size:12pt;
+    font-weight:bold;
+    margin-bottom:3px;
+    color:maroon;
+}
+div.question p.qName{
+    font-size:11pt;
+    color:maroon;
+    margin-top:3px;
+}
+div.question p.qName a{
+    font-size:11pt;
+}
+div.question p.qDate{
+    font-size:11pt;
+    display:inline-block;
+    color:rgb(90, 90, 90);
+}
+div.question a.numResponses{
+    font-size:11pt;
+    display:inline-block;
+    float:right;
+    color:rgb(90, 90, 90);
+    text-decoration:none;
+}
+div.question a.numResponses:hover{
+    text-decoration: underline;
+}
+div.question p.qDesc{
+    font-size:12pt;
+    max-height:55px;
+    overflow:hidden;
+    margin-bottom:5px;
+}

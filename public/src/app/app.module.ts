@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { NewQuestionComponent } from './new-question/new-question.component'
+import { QuestionsComponent } from './questions/questions.component'
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { NewQuestionComponent } from './new-question/new-question.component'
     LoginComponent,
     HeaderComponent,
     RegistrationComponent,
-    NewQuestionComponent
+    NewQuestionComponent,
+    QuestionsComponent,
+    
   ],
   imports: [
     BrowserModule,
