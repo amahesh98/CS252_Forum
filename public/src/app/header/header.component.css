@@ -1,3 +1,6 @@
+div.headerWrapper{
+    margin:0px;
+}
 div.top{
     background:maroon;
 }
@@ -7,4 +10,71 @@ div.top p{
     text-align: center;
     margin:0px;
     color:white;
+}
+div.bottom{
+    border:1px solid yellow;
+    background:rgb(211, 162, 162);
+}
+div.bottom div.right p{
+    display:inline-block;
+    width:fit-content;
+    font-family: 'Indie Flower', cursive;
+    font-size:16pt;
+    font-weight:bold;
+    margin:0px;
+    margin-right:15px;
+}
+div.bottom button{
+    display:inline-block;
+    background:white;
+    color:maroon;
+    font-size:16pt;
+    border-radius:4px;
+    font-family: 'Indie Flower', cursive;
+    font-weight:bold;
+    margin-right:10px;
+    border:1px solid maroon;
+}
+div.bottom button:hover{
+    background:rgb(199, 199, 199);
+    color:rgb(90, 0, 0);
+    border:1px solid rgb(85, 0, 0);
+}
+div.right{
+    width:fit-content;
+    display: inline-block;
+    float:right;
+    margin-top:6px;
+}
+div.myDropdown p{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:13pt;
+    color:maroon;
+    margin:0px;
+    display:inline-block;
+    vertical-align: top;
+    margin-top:2px;
+    
+    margin-left:3px;
+}
+div.myDropdown{
+    display:inline-block;
+    font-size:14pt;
+    background:rgb(255, 255, 255);
+    width:125px;
+    padding:5px 2px;
+    margin:5px;
+    border-radius:5px;
+    border:1px solid maroon;
+}
+div.myDropdown a{
+    float:right;
+    border-left:2px solid maroon;
+    padding-left:8px;
+    margin-left:6px;
+    margin-right:6px;
+}
+div.myDropdown img{
+    width:20px;
+    display:inline-block;
 }
