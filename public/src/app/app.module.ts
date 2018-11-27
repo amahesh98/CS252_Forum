@@ -12,6 +12,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { NewQuestionComponent } from './new-question/new-question.component'
 import { QuestionsComponent } from './questions/questions.component'
 import { SinglePostComponent } from './single-post/single-post.component';
+import { UserComponent } from './user/user.component';
 
 
 @NgModule({
@@ -23,6 +24,8 @@ import { SinglePostComponent } from './single-post/single-post.component';
     NewQuestionComponent,
     QuestionsComponent,
     SinglePostComponent,
+    UserComponent,
+    
   ],
   imports: [
     BrowserModule,

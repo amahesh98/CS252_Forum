@@ -1,0 +1,135 @@
+div.mainBox{
+    background:white;
+    border-radius:10px;
+    width:700px;
+    display:block;
+    margin:auto;
+    padding:15px;
+    margin-top:30px;
+}
+
+img.profilePic {
+    width:300;
+    display: inline-block;
+    margin:auto;
+    margin-left:33%;
+    border: solid black;
+    border-radius: 5px;
+}
+
+h1.success{
+    color:green;
+    text-align: center;
+}
+
+h1.failure{
+    color:red;
+    text-align:center;
+}
+
+div.mainBox p.boxTitle{
+    font-family: 'Ubuntu', sans-serif;
+    font-size:14pt;
+    text-align: center;
+    margin:5px;
+    color:maroon;
+
+}
+
+div.mainBox p.userInfo{
+    font-family: 'Ubuntu', sans-serif;
+    font-size:14pt;
+    text-align: left;
+    margin:5px;
+    color:maroon;
+
+}
+
+div.questionInputs{
+    text-align: center;
+}
+
+h3.userInfo {
+    font-family: 'Ubuntu', sans-serif;
+    color: maroon;
+    text-align: left;
+    margin: 0;
+}
+
+p.error {
+    font-size: 14pt;
+    color: maroon;
+    font-weight:bold;
+    text-align: center;
+    font-style: italic;
+    margin:0;
+}
+div.originalPost{
+    background:white;
+    width:600px;
+    display:block;
+    margin:auto;
+    border-radius:5px;
+    border:2px solid maroon;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:8px 15px;
+    margin-top:15px;
+}
+div.originalPost p{
+    margin:0px;
+}
+div.originalPost p.pTitle{
+    font-size: 16pt;
+    font-weight:bold;
+    color:maroon;
+}
+div.originalPost p.pName{
+    color:maroon;
+}
+div.originalPost p.pDate{
+    color:rgb(73, 73, 73);
+    margin-bottom:7px;
+    font-style:italic;
+}
+div.originalPost p.pDesc{
+    font-size:13pt;
+}
+div.originalPost a.pNum{
+    display:inline-block;
+    margin-top:10px;
+    height:30px;
+    text-decoration: none;
+    color:rgb(73, 73, 73);
+}
+
+
+/* Box styles */
+    .myBox {
+    border: none;
+    padding: 5px;
+    font: 24px/36px sans-serif;
+    width: 700px;
+    height: 400px;
+    overflow: scroll;
+    }
+    
+    /* Scrollbar styles */
+    ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    }
+    
+    ::-webkit-scrollbar-track {
+    border: 1px solid maroon;
+    border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    background: maroon;  
+    border-radius: 10px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+    background: black;  
+    }
+    
