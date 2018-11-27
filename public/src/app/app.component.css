@@ -3,4 +3,5 @@ div.wrapper{
     background:gray;
     display:block;
     margin:auto;
+    padding:1px;
 }
