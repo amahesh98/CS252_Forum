@@ -1,0 +1,58 @@
+
+div.loginWrapper{
+    background: white;
+    padding-top:1px;
+    padding-bottom:1px;
+  }
+  div.mainBox{
+      background:maroon;
+      border-radius:5px;
+      width:450px;
+      display:block;
+      margin:auto;
+      padding:15px;
+      margin-top:30px;
+  }
+
+  div.loginInputs{
+      text-align: center;
+  }
+
+  div.mainBox p.boxTitle{
+      font-size:24pt;
+      font-family: 'Ubuntu', sans-serif;
+      font-weight:bold;
+      text-align: center;
+      color:white;
+      margin:0px;
+  }
+  p.error {
+      font-size: 14pt;
+      color: white;
+      font-weight:bold;
+      text-align: center;
+      font-style: italic;
+  }
+  input.loginBox{
+      font-size:14pt;
+      width:375px;
+      margin:10px;
+      display:inline-block;
+  }
+  button.login{
+      display:block;
+      background:white;
+      width:300px;
+      margin:auto;
+      color:maroon;
+      height:45px;
+      border-radius:7px;
+      margin-top:20px;
+      font-size:15pt;
+  }
+
+  p.signup{
+      text-align: center;
+      color: white;
+  }
+  
