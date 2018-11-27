@@ -1,13 +1,14 @@
     <div class='mainBox'>
       <p class='boxTitle'>Ask a Question!</p>
-      <h2 class="questionCategory">Question Category: Sports</h2>
+      <h2 class="questionCategory">Question Category: {{questionCategory}}</h2>
       <div class="questionInputs">
         <h2 class="questionTitle">Enter Question Title</h2>
-        <input type='text' class='TitleBox' placeholder='Question Title'>
-        <p class="error">Title is invalid!</p>
+        <input type='text' class='TitleBox' placeholder='Question Title' [(ngModel)]="questionTitle">
+        <p class="error" *ngIf="showErr_title">Title is invalid!</p>
         <h2 class="questionTitle">Enter Question</h2>
-        <textarea rows="10" cols="90" class="question" placeholder="Enter Question"></textarea>
-        <p class="error">Question is invalid!</p>
+        <textarea rows="10" cols="90" class="question" placeholder="Enter Question" [(ngModel)]="questionText"></textarea>
+        <p class="error" *ngIf="showErr_question">Question is invalid!</p>
       </div>
-      <button class='post'>Post Question</button>
+      <button class='post' (click)="submitQuestion()">Post Question</button>
+      <h1 class="failure" *ngIf="showFailure">Failed to Post:(</h1>
     </div>

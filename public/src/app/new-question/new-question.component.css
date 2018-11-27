@@ -8,6 +8,16 @@ div.mainBox{
     margin-top:30px;
 }
 
+h1.success{
+    color:green;
+    text-align: center;
+}
+
+h1.failure{
+    color:red;
+    text-align:center;
+}
+
 div.mainBox p.boxTitle{
     font-family: 'Indie Flower', cursive;
     font-size:44pt;
