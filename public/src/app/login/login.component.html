@@ -2,12 +2,12 @@
   <div class='mainBox'>
     <p class='boxTitle'>Login</p>
     <div class="loginInputs">
-      <input type='text' class='loginBox' placeholder='Username'>
-      <p class="error">Username is invalid!</p>
-      <input type='password' class='loginBox'  placeholder='Password'>
-      <p class="error">Password is invalid!</p>
+      <input type='text' class='loginBox' [(ngModel)]="email" placeholder='Email'>
+      <p *ngIf=showErr_email class="error">Email is invalid!</p>
+      <input type='password' class='loginBox' [(ngModel)]="password"  placeholder='Password'>
+      <p *ngIf=showErr_password class="error">Password is invalid!</p>
     </div>
-    <button class='login'>Login</button>
+    <button (click)="submitLogin()" class='login'>Login</button>
     <p class="signup" [routerLink]="['/registration']">Sign up</p>
   </div>
 </div>

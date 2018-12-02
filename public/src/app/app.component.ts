@@ -22,9 +22,11 @@ export class AppComponent {
   }
 
   logic(){
-    if(localStorage.getItem('loggedIntoAccount') == 'true'){
+    if(localStorage.getItem('OF_LOG_I') == 'true'){
       this.show_page = true;
+      console.log("logged in");
     }else{
+      console.log("not logged in");
       this.show_login = true;
       this._router.navigate(['/login']);
     }
