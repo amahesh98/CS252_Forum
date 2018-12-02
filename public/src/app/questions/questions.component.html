@@ -3,7 +3,7 @@
     <button [routerLink]="['/new-question']">ASK</button>
     <input type='text' placeholder='search'>
   </div>
-  <div class='questions'>
+  <div class='questions' (click)="showQuestion()">
     <div class='question'>
       <p class='qTitle'>How Do I Brush My Teeth?</p>
       <p class='qDesc'>My Name is Spencer Kline. I have a question. Currently I don't know how to brush my teeth and I was hoping someone could help me. Here are some more words to take up space</p>
