@@ -70,7 +70,24 @@ app.post('/processRegister', function(request, response){
     
 })
 app.post('/processLogin', function(request, response){
-
+    var email = request.body['email'];
+    var password=request.body['password'];
+    User.findOne({email:email},function(error,user){
+        if(error){
+            return response.json({success:500,message:'Server Error',error:error});
+        }else{
+            if(user==null){
+                return response.json({success:401,message:'Invalid login'});
+            }else{
+               
+                if(bcrypt.compareSync(password,user.password)){
+                    return response.json({success:200,message:'Login Successful',user:user});
+                }else{
+                    return response.json({success:401,message: 'Invalid login'});
+                }
+            }
+        }
+    })
 })
 
 app.all("*", function(request, response){
