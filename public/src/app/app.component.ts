@@ -17,7 +17,8 @@ export class AppComponent {
   }
 
   ngOnInit(){
-    this.logic();
+    // this.logic();
+    this.show_page=true;
   }
 
   logic(){

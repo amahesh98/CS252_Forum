@@ -1,6 +1,7 @@
 div.questionsWrapper{
     background:rgb(202, 202, 202);
     padding:1px;
+    border-left:1px solid rgb(54, 54, 54);
 }
 div.top button{
     width:60px;

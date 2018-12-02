@@ -130,7 +130,7 @@ div.comment p.cDate{
     margin-bottom:10px;
 }
 div.comments{
-    max-height:500px;
+    max-height:570px;
     overflow:scroll;
     background:rgb(208, 208, 255);
     width:760px;

@@ -1,5 +1,5 @@
 div.mainBox{
-    background:rgb(202,202,202);
+    background:rgb(243, 245, 255);
     border-radius:10px;
     width:700px;
     display:block;
@@ -74,8 +74,15 @@ button.post{
     margin-top:20px;
     font-size:15pt;
 }
+button.post:hover{
+    background:rgb(102, 0, 0);
+    color:rgb(190, 190, 190);
+}
 
 textarea.question {
     border-radius: 4px;
     margin: 10px;
+    font-size:12pt;
+    width:667.6px;
+    resize:none;
 }

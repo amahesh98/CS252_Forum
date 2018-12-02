@@ -6,7 +6,7 @@
         <input type='text' class='TitleBox' placeholder='Question Title' [(ngModel)]="questionTitle">
         <p class="error" *ngIf="showErr_title">Title is invalid!</p>
         <h2 class="questionTitle">Enter Question</h2>
-        <textarea rows="10" cols="90" class="question" placeholder="Enter Question" [(ngModel)]="questionText"></textarea>
+        <textarea rows='7' cols="90" class="question" placeholder="Enter Question" [(ngModel)]="questionText"></textarea>
         <p class="error" *ngIf="showErr_question">Question is invalid!</p>
       </div>
       <button class='post' (click)="submitQuestion()">Post Question</button>

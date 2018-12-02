@@ -36,6 +36,7 @@ var QuestionSchema = new mongoose.Schema({
     subject:{type:String, required:[true, "Subject is required"]},
     question:{type:String, required:[true, "A question is required"]},
     username:{type:String, required:[true, "Username of poster is required"]},
+    category:{type:String, required:[true, "Category is required"]},
     comments:[CommentSchema] 
 }, {timestamps:true})
 mongoose.model('Question', QuestionSchema)
@@ -70,6 +71,44 @@ app.post('/processRegister', function(request, response){
     
 })
 app.post('/processLogin', function(request, response){
+
+})
+app.post('/askQuestion', function(request, response){
+    var title=request.body['title']
+    var desc=request.body['desc']
+    var userID=request.body['userID']
+    var category=request.body['category']
+    User.findOne({_id:userID}, function(error, user){
+        if(error){
+            return response.json({success:-1, message:'Server error'})
+        }
+        else if(user==null){
+            return response.json({success:0, message:'No user found with this ID'})
+        }
+        else{
+            var username=user.user_name
+            var newQuestion = new Question({userID:userID, subject:title, question:desc, username:username, category:category})
+            newQuestion.save(function(error){
+                if(error){
+                    return response.json({success:0, message:'Unable to save new question'})
+                }
+                else{
+                    return response.json({success:1, message:'Successfully created question', question:newQuestion})
+                }
+            })
+        }
+    })
+})
+app.post('/fetchQuestions', function(request, response){
+    var category=request.body['category']
+    Question.find({category:category}, function(error, questions){
+        if(error){
+            return response.json({success:-1, message:"Server error"})
+        }
+        else{
+            return response.json({success:1, message:'Successfully fetched questions', category:category, questions:questions})
+        }
+    })
 
 })
 
