@@ -1,9 +1,12 @@
+div.bigWrapper{
+    background:rgb(199, 199, 199);
+}
 div.wrapper{
     width:1200px;
     background:gray;
     display:block;
     margin:auto;
-    padding:1px;
+    padding-top:1px;
 }
 div.left{
     width:400px;
