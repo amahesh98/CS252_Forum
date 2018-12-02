@@ -13,15 +13,14 @@ export class AppComponent {
   show_page:boolean;
   constructor(private _httpService: HttpService,private _router: Router){
     this.show_login = false;
-    this.show_page = true;
+    this.show_page = false;
   }
 
   ngOnInit(){
-    //this.logic();
+    this.logic();
   }
 
   logic(){
-    console.log("in ");
     if(localStorage.getItem('loggedIntoAccount') == 'true'){
       this.show_page = true;
     }else{
