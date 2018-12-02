@@ -9,4 +9,8 @@ export class HttpService {
   constructor(private _http:HttpClient) {
 
   }
+
+  RegisterUser(user_name,first_name,last_name,email,password){
+    return this._http.post('/processRegister',{user_name:user_name,first_name:first_name,last_name:last_name,email:email,password:password});
+  }
 }

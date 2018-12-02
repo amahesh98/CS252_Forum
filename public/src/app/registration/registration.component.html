@@ -1,23 +1,23 @@
 <div class='registrationWrapper'>
-    <h1 class="success">Registration Successful!</h1>
-    <h1 class="failure">Registration Failed!</h1>
+    <h1 *ngIf=show_succ class="success">Registration Successful!</h1>
+    <h1 *ngIf=show_fail class="failure">{{status_message}}!</h1>
   <div class='mainBox'>
     <p class='boxTitle'>Register Account</p>
     <div class="registrationInputs">
-      <input type='text' class='registrationBox' placeholder='Username'>
-      <p class="error">Username is invalid!</p>
-      <input type='text' class='registrationBox' placeholder='First Name'>
-      <p class="error">First name is invalid!</p>
-      <input type='text' class='registrationBox' placeholder='Last Name'>
-      <p class="error">Last name is invalid!</p>
-      <input type='text' class='registrationBox' placeholder='Email'>
-      <p class="error">Email is invalid!</p>
-      <input type='password' class='registrationBox'  placeholder='Password'>
-      <p class="error">Password is invalid!</p>
-      <input type='password' class='registrationBox'  placeholder='Confirm Password'>
-      <p class="error">Password does not match!</p>
+      <input type='text' class='registrationBox' [(ngModel)]="user_name" placeholder='Username'>
+      <p *ngIf=showErr_username class="error">Username is invalid!</p>
+      <input type='text' class='registrationBox' [(ngModel)]="first_name" placeholder='First Name'>
+      <p *ngIf=showErr_firstname class="error">First name is invalid!</p>
+      <input type='text' class='registrationBox' [(ngModel)]="last_name" placeholder='Last Name'>
+      <p *ngIf=showErr_lastname class="error">Last name is invalid!</p>
+      <input type='text' class='registrationBox' [(ngModel)]="email" placeholder='Email'>
+      <p *ngIf=showErr_email class="error">Email is invalid!</p>
+      <input type='password' class='registrationBox' [(ngModel)]="password"  placeholder='Password'>
+      <p *ngIf=showErr_password class="error">Password is invalid!</p>
+      <input type='password' class='registrationBox' [(ngModel)]="password_second"  placeholder='Confirm Password'>
+      <p *ngIf=showErr_passwsec class="error">Password does not match!</p>
     </div>
-    <button class='register'>Register</button>
+    <button class='register' (click)="submitRegister()">Register</button>
     <p class="login" [routerLink]="['/login']">login</p>
   </div>
 </div>
