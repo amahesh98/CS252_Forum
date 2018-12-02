@@ -28,6 +28,7 @@ div.loginWrapper{
   }
   p.error {
       font-size: 14pt;
+      margin:0px;
       color: white;
       font-weight:bold;
       text-align: center;
@@ -35,6 +36,7 @@ div.loginWrapper{
   }
   input.loginBox{
       font-size:14pt;
+      border-radius:7px;
       width:375px;
       margin:10px;
       display:inline-block;

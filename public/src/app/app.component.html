@@ -1,6 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-
+<div *ngIf="show_page">
 <div class='wrapper'>
   <app-header></app-header>
   <div class='left'>
@@ -10,5 +10,8 @@
       <router-outlet></router-outlet>
   </div>
 </div>
-
-
+<a [routerLink]="['/user']">USER</a>
+</div>
+<div *ngIf="show_login">
+    <router-outlet></router-outlet>
+</div>

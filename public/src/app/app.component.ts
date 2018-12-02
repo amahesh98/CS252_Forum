@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from './http.service'
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,24 @@ import { HttpService } from './http.service'
 })
 export class AppComponent {
   title = 'public';
-  constructor(private _httpService: HttpService){
-
+  show_login:boolean;
+  show_page:boolean;
+  constructor(private _httpService: HttpService,private _router: Router){
+    this.show_login = false;
+    this.show_page = true;
   }
+
   ngOnInit(){
-    
+    //this.logic();
+  }
+
+  logic(){
+    console.log("in ");
+    if(localStorage.getItem('loggedIntoAccount') == 'true'){
+      this.show_page = true;
+    }else{
+      this.show_login = true;
+      this._router.navigate(['/login']);
+    }
   }
 }

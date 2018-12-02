@@ -27,6 +27,7 @@ div.registrationWrapper{
   }
   p.error {
       font-size: 14pt;
+      margin:0px;
       color: white;
       font-weight:bold;
       text-align: center;
@@ -34,6 +35,7 @@ div.registrationWrapper{
   }
   input.registrationBox{
       font-size:14pt;
+      border-radius:7px;
       width:375px;
       margin:10px;
       display:inline-block;
@@ -54,6 +56,7 @@ div.registrationWrapper{
       text-align: center;
       text-decoration: underline;
       color: white;
+      margin:0px;
   }
 
   h1.success{

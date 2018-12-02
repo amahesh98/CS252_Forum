@@ -9,10 +9,11 @@ div.mainBox{
 }
 
 img.profilePic {
-    width:300;
+    max-width:200px;
+    max-height:200px;
     display: inline-block;
     margin:auto;
-    margin-left:33%;
+    margin-left:34%;
     border: solid black;
     border-radius: 5px;
 }
@@ -79,24 +80,27 @@ div.originalPost p{
     margin:0px;
 }
 div.originalPost p.pTitle{
-    font-size: 16pt;
+    font-size: 12pt;
     font-weight:bold;
     color:maroon;
 }
 div.originalPost p.pName{
     color:maroon;
+    font-size: 12pt;
 }
 div.originalPost p.pDate{
     color:rgb(73, 73, 73);
-    margin-bottom:7px;
+    margin-bottom:4px;
+    font-size: 12pt;
     font-style:italic;
 }
 div.originalPost p.pDesc{
-    font-size:13pt;
+    font-size:11pt;
 }
 div.originalPost a.pNum{
     display:inline-block;
     margin-top:10px;
+    font-size: 12pt;
     height:30px;
     text-decoration: none;
     color:rgb(73, 73, 73);
@@ -109,7 +113,7 @@ div.originalPost a.pNum{
     padding: 5px;
     font: 24px/36px sans-serif;
     width: 700px;
-    height: 400px;
+    height: 360px;
     overflow: scroll;
     }
     
@@ -132,4 +136,42 @@ div.originalPost a.pNum{
     ::-webkit-scrollbar-thumb:hover {
     background: black;  
     }
-    
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
