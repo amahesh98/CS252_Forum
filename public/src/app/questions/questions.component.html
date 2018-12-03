@@ -1,15 +1,15 @@
 <div class='questionsWrapper'>
   <div class='top'>
     <button [routerLink]="['/ask']">ASK</button>
-    <input type='text' placeholder='search'>
+    <input type='text' (keyup)="searchQuestions()" [(ngModel)]="questionSearch" placeholder='search'>
   </div>
-  <div *ngIf=!showNo_questions class='questions' (click)="showQuestion()">
-    <div class='question'>
-      <p class='qTitle'>How Do I Brush My Teeth?</p>
-      <p class='qDesc'>My Name is Spencer Kline. I have a question. Currently I don't know how to brush my teeth and I was hoping someone could help me. Here are some more words to take up space</p>
-      <p class='qName'>Posted by: <a href='#'>spKl1ne71</a></p>
-      <p class='qDate'>November 18, 2018</p>
-      <a class='numResponses'>11 Comments</a>
+  <div *ngIf=!showNo_questions class='questions' >
+    <div class='question' *ngFor="let question of shownQuestions" (click)="showQuestion()">
+      <p class='qTitle'>{{question['subject']}}</p>
+      <p class='qDesc'>{{question['question']}}</p>
+      <p class='qName'>Posted by: <a href='#'>{{question['username']}}</a></p>
+      <p class='qDate'>{{question['createdAt'] | date}}</p>
+      <a class='numResponses'>{{question['comments']['length']}} Comments</a>
     </div>
   </div>
   <div *ngIf=showNo_questions class='questions'>

@@ -63,6 +63,7 @@ export class NewQuestionComponent implements OnInit {
         if(data['success']==1){
           this.showBigErr=false
           var destPath='/question/'+data['question']['_id']
+          location.reload(true);
           return this._router.navigate([destPath])
         }
         else{
