@@ -30,7 +30,7 @@
     <p class='commentSuccess' *ngIf='showCommentSuccess'>{{commentSuccess}}</p>
     <div class='comment' *ngFor="let comment of question.comments">
         <p class='cName'>Posted by: <a href='#'>{{comment.username}}</a></p>
-        <p class='cDate'>{{comment.createdAt}}/p>
+        <p class='cDate'>{{comment.createdAt | date}} </p>
         <p class='cDesc'>{{comment.comment}}</p>
     </div>
     <!-- <div class='comment'>

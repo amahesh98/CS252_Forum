@@ -38,4 +38,8 @@ export class HttpService {
   fetchUserQuesitons(userID){
     return this._http.post('/fetchUserQuestions',{userID:userID});
   }
+
+  updateProfilePicture(userID,picture_url){
+    return this._http.post('/updateProfilePic',{userID:userID, picture_url:picture_url});
+  }
 }
