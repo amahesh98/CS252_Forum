@@ -17,16 +17,13 @@ export class AppComponent {
   }
 
   ngOnInit(){
-    // this.logic();
-    this.show_page=true;
+    this.logic();
   }
 
   logic(){
     if(localStorage.getItem('OF_LOG_I') == 'true'){
       this.show_page = true;
-      console.log("logged in");
     }else{
-      console.log("not logged in");
       this.show_login = true;
       this._router.navigate(['/login']);
     }

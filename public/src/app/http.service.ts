@@ -18,4 +18,7 @@ export class HttpService {
     return this._http.post('/processLogin',{email:email,password:password});
   }
 
+  fetchQuestions(category){
+    return this._http.post('/fetchQuestions',{category:category});
+  }
 }
