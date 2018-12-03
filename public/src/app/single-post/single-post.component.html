@@ -1,12 +1,20 @@
 <div class='postWrapper'>
-  <div class='originalPost'>
+  <!-- <div class='originalPost'>
     <p class='pTitle'>How Do I Brush My Teeth?</p>
     <p class='pName'>Posted by: <a href='#'>spKl1ne71</a></p>
     <p class='pDate'>November 18, 2018</p>
     <p class='pDesc'>My Name is Spencer Kline. I have a question. Currently I don't know how to brush my teeth and I was hoping someone could help me. Here are some more words to take up space. Here are more words to take up even more space. These will make no sense</p>
     <a class='pNum' (click)="showCommentsFunc()">11 Comments</a>
     <button (click)="showReplyFunc()">Leave a Reply</button>
-  </div>
+  </div> -->
+  <div class='originalPost'>
+      <p class='pTitle'>{{question.subject}}</p>
+      <p class='pName'>Posted by: <a href='#'>{{question.username}}</a></p>
+      <p class='pDate'>{{question.createdAt}}</p>
+      <p class='pDesc'>{{question.question}}</p>
+      <a class='pNum' (click)="showCommentsFunc()">{{question.comments.length}} Comments</a>
+      <button (click)="showReplyFunc()">Leave a Reply</button>
+    </div>
   <div class='leaveReply' *ngIf='showReply'>
     <p>Leave a Reply</p>
     <textarea></textarea>

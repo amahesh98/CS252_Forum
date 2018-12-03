@@ -33,8 +33,8 @@ var Comment=mongoose.model('Comment')
 
 var QuestionSchema = new mongoose.Schema({
     userID:{type:String, required:[true, "UserID is required"]},
-    subject:{type:String, required:[true, "Subject is required"]},
-    question:{type:String, required:[true, "A question is required"]},
+    subject:{type:String, required:[true, "Subject is required"], minlength:[5, "Minimum subject length is 5"]},
+    question:{type:String, required:[true, "A question is required"], minlength:[10, "Minimum question length is 10"]},
     username:{type:String, required:[true, "Username of poster is required"]},
     category:{type:String, required:[true, "Category is required"]},
     comments:[CommentSchema] 
@@ -126,7 +126,20 @@ app.post('/fetchQuestions', function(request, response){
             return response.json({success:1, message:'Successfully fetched questions', category:category, questions:questions})
         }
     })
-
+})
+app.post('/fetchSingleQuestion', function(request, response){
+    var questionID=request.body['questionID']
+    Question.findOne({_id:questionID}, function(error, question){
+        if(error){
+            return response.json({success:-1, message:'Server error'})
+        }
+        else if(question==null){
+            return response.json({success:0, message:'Unable to fetch question with this id'})
+        }
+        else{
+            return response.json({success:1, message:'Successfully fetched question', question:question})
+        }
+    })
 })
 
 app.all("*", function(request, response){
