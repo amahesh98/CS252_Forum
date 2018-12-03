@@ -13,6 +13,7 @@ import { NewQuestionComponent } from './new-question/new-question.component'
 import { QuestionsComponent } from './questions/questions.component'
 import { SinglePostComponent } from './single-post/single-post.component';
 import { UserComponent } from './user/user.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { UserComponent } from './user/user.component';
     QuestionsComponent,
     SinglePostComponent,
     UserComponent,
+    FooterComponent,
     
   ],
   imports: [
