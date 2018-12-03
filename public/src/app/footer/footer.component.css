@@ -1,0 +1,26 @@
+div.footerWrapper{
+    background:maroon;
+    padding:1px;
+}
+div.footerWrapper p{
+    margin:0px;
+    text-align:center;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div.footerWrapper p.cb{
+    font-size:11pt;
+    margin-top:10px;
+}
+div.footerWrapper p.me{
+    font-size:12pt;
+    margin-top:6px;
+    color:gold;
+}
+div.footerWrapper p.purdue{
+    font-style:italic;
+    font-size:11pt;
+    margin-top:6px;
+    color:rgb(202, 200, 200);
+    margin-bottom:10px;
+}
