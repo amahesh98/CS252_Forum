@@ -7,7 +7,7 @@
     <div class='question' *ngFor="let question of shownQuestions" >
       <p [routerLink]="['/question',question['_id']]" class='qTitle'>{{question['subject']}}</p>
       <p [routerLink]="['/question',question['_id']]" class='qDesc'>{{question['question']}}</p>
-      <p class='qName'>Posted by: <a [routerLink]="['/user']">{{question['username']}}</a></p>
+      <p class='qName'>Posted by: <a [routerLink]="['/user',question['userID']]">{{question['username']}}</a></p>
       <p class='qDate'>{{question['createdAt'] | date}}</p>
       <a [routerLink]="['/question',question['_id']]" class='numResponses'>{{question['comments']['length']}} Comments</a>
     </div>

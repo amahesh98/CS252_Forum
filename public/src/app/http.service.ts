@@ -27,4 +27,12 @@ export class HttpService {
   fetchQuestions(category){
     return this._http.post('/fetchQuestions',{category:category});
   }
+
+  fetchUser(userID){
+    return this._http.post('/fetchUser',{userID:userID});
+  }
+
+  fetchUserQuesitons(userID){
+    return this._http.post('/fetchUserQuestions',{userID:userID});
+  }
 }

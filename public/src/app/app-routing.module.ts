@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'registration', component:RegistrationComponent},
   {path: 'question/:qid', component:SinglePostComponent},
   {path: 'ask', component:NewQuestionComponent},
-  {path: 'user', component:UserComponent},
+  {path: 'user/:uid', component:UserComponent},
 ];
 
 @NgModule({

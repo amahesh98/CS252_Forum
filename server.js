@@ -141,6 +141,37 @@ app.post('/fetchSingleQuestion', function(request, response){
         }
     })
 })
+app.post('/fetchUser',function(request,response){
+    var userID=request.body['userID'];
+    if(!userID){
+        return response.json({success:-1,message:'Unable to find userID'});
+    }
+    User.findOne({_id:userID}, function(error,user){
+        if(error){
+            return response.json({success:-1,message:'Server error',error:error});
+        }else if(user == null){
+            return response.json({success:0,message:'Unable to fetch user with this id'});
+        }else{
+            return response.json({success:1, message:'Successfully fetched user', user:user});
+        }
+    })
+})
+
+app.post('/fetchUserQuestions', function(request,response){
+    var userID=request.body['userID'];
+    if(!userID){
+        return response.json({success:-1,message:'Unable to find userID'});
+    }
+    Question.find({userID:userID}, function(error,question){
+        if(error){
+            return response.json({success:-1,message:'Server error',error:error});
+        }else if(question == null){
+            return response.json({success:0,message:'Unable to fetch users questions'});
+        }else{
+            return response.json({success:1,message:'Successfully fetched questions',questions:question});
+        }
+    })
+})
 
 app.all("*", function(request, response){
     return response.sendFile(path.resolve('./public/dist/public/index.html'))
