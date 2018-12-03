@@ -24,6 +24,7 @@ div.mainBox p.boxTitle{
     text-align: center;
     margin:10px;
     color:maroon;
+    margin-bottom:0px;
 
 }
 
@@ -55,12 +56,12 @@ input.TitleBox{
 }
 
 p.error {
-    font-size: 14pt;
-    color: maroon;
-    font-weight:bold;
-    text-align: center;
-    font-style: italic;
+    font-size: 13pt;
+    color: red;
     margin:0;
+    text-align:left;
+    margin-left:10px;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 button.post{
@@ -85,4 +86,12 @@ textarea.question {
     font-size:12pt;
     width:667.6px;
     resize:none;
+}
+p.bigError{
+    font-size:14pt;
+    margin:0px;
+    font-family:Arial, Helvetica, sans-serif;
+    color:red;
+    margin-left:12px;
+    margin-bottom:7px;
 }
