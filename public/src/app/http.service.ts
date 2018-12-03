@@ -17,6 +17,9 @@ export class HttpService {
   UserLogin(email,password){
     return this._http.post('/processLogin',{email:email,password:password});
   }
+  askQuestion(subject, question, category, userID){
+    return this._http.post('/askQuestion', {title:subject, desc:question, userID:userID, category:category})
+  }
 
   fetchQuestions(category){
     return this._http.post('/fetchQuestions',{category:category});
