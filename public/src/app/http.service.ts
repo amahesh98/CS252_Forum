@@ -27,4 +27,7 @@ export class HttpService {
     return this._http.post('/leaveComment', {userID:userID, questionID:questionID, comment:comment})
   }
 
+  fetchQuestions(category){
+    return this._http.post('/fetchQuestions',{category:category});
+  }
 }
