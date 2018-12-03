@@ -141,6 +141,44 @@ app.post('/fetchSingleQuestion', function(request, response){
         }
     })
 })
+app.post('/leaveComment', function(request, response){
+    var userID=request.body['userID']
+    var questionID=request.body['questionID']
+    var comment=request.body['comment']
+    
+    User.findOne({_id:userID}, function(error, user){
+        if(error){
+            return response.json({success:-1, message:'Server error'})
+        }
+        else if(user==null){
+            return response.json({success:0, message:'No user exists with this id'})
+        }
+        else{
+            //Successfully found user
+            var newComment = new Comment({userID:userID, questionID:questionID, comment:comment, username:user.user_name})
+            newComment.save(function(error){
+                if(error){
+                    return response.json({success:0, message:'Unable to save new comment'})
+                }
+                else{
+                    //Successfully saved comment, now push to question
+                    Question.findOneAndUpdate({_id:questionID}, {$push:{comments:newComment}}, function(error, question){
+                        if(error){
+                            return response.json({success:-1, message:'Server error'})
+                        }
+                        else if(question==null){
+                            return response.json({success:0, message:'No question exists with this id'})
+                        }
+                        else{
+                            //Successfully found question and pushed Comment
+                            return response.json({success:1, message:'Successfully placed comment', comment:newComment})
+                        }
+                    })
+                }
+            })
+        }
+    })
+})
 
 app.all("*", function(request, response){
     return response.sendFile(path.resolve('./public/dist/public/index.html'))

@@ -23,5 +23,8 @@ export class HttpService {
   fetchSingleQuestion(questionID){
     return this._http.post('/fetchSingleQuestion', {questionID:questionID})
   }
+  leaveComment(comment, userID, questionID){
+    return this._http.post('/leaveComment', {userID:userID, questionID:questionID, comment:comment})
+  }
 
 }
