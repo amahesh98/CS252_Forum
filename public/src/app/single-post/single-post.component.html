@@ -10,7 +10,7 @@
   <div class='originalPost'>
       <p class='pTitle'>{{question.subject}}</p>
       <p class='pName'>Posted by: <a href='#'>{{question.username}}</a></p>
-      <p class='pDate'>{{question.createdAt}}</p>
+      <p class='pDate'>{{question.createdAt | date}}</p>
       <p class='pDesc'>{{question.question}}</p>
       <a class='pNum' (click)="showCommentsFunc()">{{question.comments.length}} Comments</a>
       <button (click)="showReplyFunc()">Leave a Reply</button>
