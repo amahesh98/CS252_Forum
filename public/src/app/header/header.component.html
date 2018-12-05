@@ -4,8 +4,18 @@
     </div>
     <div *ngIf="showBar" class='bottom'>
       <div class='myDropdown'>
-        <p>Category</p>
-        <a><img src='https://cdn1.iconfinder.com/data/icons/basic-ui-7/100/Artboard_3-512.png' alt='Down'></a>
+        <p>{{category}}</p>
+        <a><img src='https://cdn1.iconfinder.com/data/icons/basic-ui-7/100/Artboard_3-512.png' alt='Down'  (click)='dropdownClicked()'></a>
+        <div class='dropdownButtons' *ngIf='showDropdown==true'>
+          <div class='singleDrop' (click)="changeCategory('General')"><p>General</p></div>
+          <div class='singleDrop' (click)="changeCategory('Sports')"><p>Sports</p></div>
+          <div class='singleDrop' (click)="changeCategory('Movies')"><p>Movies</p></div>
+          <div class='singleDrop' (click)="changeCategory('Music')"><p>Music</p></div>
+          <div class='singleDrop' (click)="changeCategory('Clothing')"><p>Clothing</p></div>
+          <div class='singleDrop' (click)="changeCategory('Food')"><p>Food</p></div>
+          <div class='singleDrop' (click)="changeCategory('Games')"><p>Games</p></div>
+          <div class='singleDrop' (click)="changeCategory('Lifestyle')"><p>Lifestyle</p></div>
+        </div>
       </div>
       <div class='right'>
           <p>Welcome, {{user_name}}</p>

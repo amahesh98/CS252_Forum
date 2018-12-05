@@ -11,13 +11,23 @@ export class HeaderComponent implements OnInit {
   user_name:string;
   showBar:boolean;
   str_showBar:string;
+  showDropdown:boolean
+  category:string
   constructor(private _httpService:HttpService,private _router: Router) {
     this.user_name = localStorage.getItem('OF_UI_UN');
     this.str_showBar = localStorage.getItem('OF_LOG_I');
+    this.showDropdown=false
+    this.category=''
   }
 
   ngOnInit() {
     this.checkLoggedIn();
+    if(localStorage.getItem('category')!=null){
+      this.category=localStorage.getItem('category')
+    }
+    else{
+      this.changeCategory('General')
+    }
   }
 
   checkLoggedIn(){
@@ -34,6 +44,14 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('OF_UID');
     location.reload(true);
     this._router.navigate(['']);
-
+  }
+  dropdownClicked(){
+    console.log("Calling this function")
+    this.showDropdown=!this.showDropdown
+  }
+  changeCategory(newCat){
+    localStorage.setItem('category', newCat)
+    this.category=newCat
+    this.showDropdown=false
   }
 }

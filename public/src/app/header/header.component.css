@@ -14,6 +14,7 @@ div.top p{
 div.bottom{
     border:1px solid yellow;
     background:rgb(211, 162, 162);
+    height:50px;
 }
 div.bottom div.right p{
     display:inline-block;
@@ -77,4 +78,16 @@ div.myDropdown a{
 div.myDropdown img{
     width:20px;
     display:inline-block;
+}
+div.myDropdown div.singleDrop{
+    border-top:1px solid maroon;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+div.myDropdown div.dropdownButtons{
+    position: relative;
+    z-index: 99;
+    /* background:rgb(243, 216, 216); */
+    background:rgb(243, 245, 255);
+    border:1px solid maroon;
 }
