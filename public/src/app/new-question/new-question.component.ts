@@ -32,8 +32,8 @@ export class NewQuestionComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.questionCategory=localStorage.getItem("category")
-    this.questionCategory="Fake"
+    this.questionCategory=localStorage.getItem("category")
+    // this.questionCategory="Fake"
   }
 
 
