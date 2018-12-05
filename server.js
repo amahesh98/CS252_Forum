@@ -193,7 +193,7 @@ app.post('/askQuestion', function(request, response){
                     var name = user.first_name+" "+user.last_name;
                     var message = "Congratulations "+name+", your question has been posted";
                     var title = "New Question Posted";
-                    sendEmail(email,title,message);
+                    // sendEmail(email,title,message);
                     return response.json({success:1, message:'Successfully created question', question:newQuestion})
                 }
             })
@@ -291,7 +291,7 @@ app.post('/leaveComment', function(request, response){
                             var name = user.first_name+" "+user.last_name;
                             var message = "Congratulations "+name+", Your comment has been posted.";
                             var title="Comment posted on Open Forum";
-                            sendEmail(posterEmail,title,message);
+                            // sendEmail(posterEmail,title,message);
                             User.findOne({_id:question.userID}, function(error,otheruser){
                                 if(error){
                                     return response.json({success:-1, message:'Server error'}) 
