@@ -53,5 +53,6 @@ export class HeaderComponent implements OnInit {
     localStorage.setItem('category', newCat)
     this.category=newCat
     this.showDropdown=false
+    location.reload(true);
   }
 }

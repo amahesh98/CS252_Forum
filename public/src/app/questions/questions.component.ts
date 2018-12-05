@@ -17,13 +17,14 @@ export class QuestionsComponent implements OnInit {
 
   constructor(private _httpService:HttpService, private _router:Router) {
     this.questions = [];
-    this.category = "Fake";
+    this.category = "";
     this.user_name = localStorage.getItem('OF_UI_UN');
     this.shownQuestions = [];
     this.questionSearch = "";
   }
 
   ngOnInit() {
+    this.category=localStorage.getItem('category')
     this.fetchQuestions()
   }
 
