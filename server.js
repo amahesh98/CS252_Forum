@@ -5,8 +5,10 @@ var bodyParser=require('body-parser')
 var path=require('path')
 var bcrypt=require('bcryptjs')
 
+
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, '/public/dist/public')))
+app.set('trust proxy', 1);
 
 var NUM_SALTS=10
 var default_picture = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw8HEA8PEA4NEA4QEBENFQ4PDg8NFRAQFRIWFhcdFRUYHigiGBolGxMTITEhJSkrLi4uFyAzODMsNygtLysBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAABQYBBAcDAv/EADwQAQACAQEDCAYHBwUAAAAAAAABAgMRBAUhBhITMUFRYcEiUnGBkdEyQmJyobGyFCNTc4KS4RUWJEOi/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AO4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADFrRWNZmIiO2eCH2zlHs+z6xFpyW7qRrH908ATIqOblbkn6GKkfetNvy0a1+U+1W7cUeynzmQXcUavKbao+tSfbSPJsYuVmav0seK0fZ51POQXEQGycqcOXSL1vjnv+nX4xx/BN4c9M8c6lq2rPbWYmAegAAAAAAAAAAAAAAAAAAADS3nvGm7qc6/XPCtI67T4fNs581cFbXtOlaxNpnwhzzeW3W3hktkt28Ir6teyAem8t65d4z6dtKa6xjrwrHzlogAAAAA99j2zJsVudjtNZ/CfbHa8AF63Jvuu8Y5ttK5Y669lvGvyS7mGLJbDaLVmYtWdYmOyXQNy7wjeOKL8ItHo2jutHl2g3wAAAAAAAAAAAAAAAAAV7lltPR4qY4/7Laz92uk/nMfBT0/yzvrnpXuxRPxtb5IAAAAAAAAABOcktq6HP0evo5YmP6ojWPw1QbZ3Zk6LNht3ZKfqiAdIgAAAAAAAAAAAAAAAAAFL5Yx/wAiv8mv6roJZeWuPS2G3fW1fhMT5q0AAAAAAAAA9ti45cX8yn6oeLe3Hj6XacMfbi39vpeQOhgAAAAAAAAAAAAAAAAArvLWv7rFPdk0+NZ+SoLByr3nG0W6CscMdtZt32000j2ayr4AAAAAAAACY5KV52018K3n8NPNDtzdO3f6dljJzedpE1mNdOE93iDoo+MOWM1a3jjFoi0eyX2AAAAAAAAAAAAAAAADnO968zaM8T/FvPxtM+bUSvKfH0e03+1Fb/hp5SigAAAZBhlgAAAB9Y6TlmKx12mKx7ZnQHQ9z15mz4InrjFT9MNx846RjiKx1REVj2RwfQAAAAAAAAAAAAAAAAIDlPum22RXJjjW9YmJrw9Kvh4qdMacJ644OoKByi2b9m2i/DSL/vI9/X+MSCNABkYZAYAAABYOTe5r5b0z3jTHX069957OHcgceOctorHXaYrHtmdHS9nxRgpWkdVaxWPdGgPQAAAAAAAAAAAAAAAAABXeWGx9JjrmiONJ0n7s/wCdPisTzz4q562paNa2iazHhIOZDY27ZLbFktjt11nr747Ja4AAAAAAJnkrsn7Rni8/RxRz/wCqeEec+5eEXyf3f+wYYiY0yX9O3hPZHujzSgAAAAAAAAAAAAAAAAAAAAKLyqvztqv4VpX/AM6+aISHKC/P2rPP2oj4ViPJHgAAAAM1nmzE906sAOn0nnRE98RL6a+7r9Lhw29bHS3xrEtgAAAAAAAAAAAAAAAAAABV+Ve8cuzZMePHktT0OfPNnTXWZiOPulaHP9/7ZG3Z7Wr9GIjHWe+I185kGhkvOWZtaZm0zrMzxmZfIAAAAAAAlN1b0zYsmGvS3nHzqY+ZM6xzZmI00X1y+tppMTHXExMe2HR937ZXbsdclfrRxj1bdsA2QAAAAAAAAAAAAAAaG8N74Ng4Xvrb1K+lb/HvBvtfa9uxbFGuS9a+E8Zn2R1yqm38p8ufWMcRir3/AErfHqhB5Mlss861ptae20zafjILFvXlP01bY8VJiLRNektOk6T3RHUrYAAAAAAAAAJXcu+rbr1rzYvS086Y10mJ6uEooB0DYN94Nt4Vvzbepf0Z93ZPuSLlyT2DfufYtIi3PpH1L62+E9cAvwhd38pMG06ReZxW7rcaz7LfPRMxaLcYnWO+OIMgAAAAADGqJ3lv/DsWtYnpMkfVpppE+M9gJdFbx3/g2LWOd0l4+pTjpPjPVCq7x33n2/WJtzaepThGnjPXKNBLbw5QZ9s1iJ6Onq04TMeNuv8AJEgAAAAAAAAAAAAAAAAA3Nh3nm2Cf3d5iPUn0qz7vk0wFw3fyox5eGaOjt60azX5wn8eSMsRasxas8YmJ1ife5g2Nj23LsU647zXvjrifbAOkiubt5U0yaVzV5k+vXjX3x1wsOPJXLEWrMWrPGJiYmJB9AAo29t/5du1rWZx4urmx12+9PkhwAAAAAAAAAAAAAAAAAAAAAAAAAbe7945d321x24dtJ41t7Y82oAs3+7rfwK/3z8mFaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf/Z";
@@ -47,6 +49,48 @@ var QuestionSchema = new mongoose.Schema({
 mongoose.model('Question', QuestionSchema)
 var Question=mongoose.model('Question')
 
+
+const nodemailer=require('nodemailer')
+const xoauth2 = require('xoauth2')
+
+var transporter=nodemailer.createTransport({
+    service:'gmail',
+    host: "smtp.gmail.com",
+    auth:{
+        user:'congo30700@gmail.com',
+        pass:'Dunsmore180',
+        xoauth2:xoauth2.createXOAuth2Generator({
+            user:'congo30700@gmail.com',
+            clientId:'307339350402-s3quf7smb0t6ltr7dqdlp3olfo2k83fb.apps.googleusercontent.com',
+            clientSecret:'ERUinG4i9XzdjSOpn_n2XLXT', 
+            refreshToken:'1/PoglDS8uVDl2m6NgU4OZcgCuK6Cs1Rmrp6QS4jBDfUM'
+        }),
+    },
+    tls: {
+        rejectUnauthorized: false
+    }
+})
+
+function sendEmail(reciever, subject, message){
+    var mailerOptions={
+        from:'Open Forum <congo30700@gmail.com>',
+        to:reciever,
+        subject:subject,
+        text:message
+    }
+    transporter.sendMail(mailerOptions, function(error, response){
+        if(error){
+            console.log(error)
+        }
+        else{
+            console.log("Email sent!")
+        }
+    })
+}
+
+
+
+
 app.post('/processRegister', function(request, response){
     var user_name=request.body['user_name'];
     var first_name=request.body['first_name'];
@@ -67,6 +111,11 @@ app.post('/processRegister', function(request, response){
                     if(error){
                         return response.json({success:400,message:'There was an error registering. Check your input',error:error});
                     }else{
+                        var email = request.body['email'];
+                        var name = request.body['first_name'] + ' ' + request.body['last_name'];
+                        var message = "Congratulations "+ name+", You are now a member of Open Forum!";
+                        var title="Congratulations from Open Forum";
+                        sendEmail(email,title,message);
                         return response.json({success:201,message:"User Created"});
                     }
                 })
@@ -140,6 +189,11 @@ app.post('/askQuestion', function(request, response){
                     return response.json({success:0, message:'Unable to save new question'})
                 }
                 else{
+                    var email = user.email;
+                    var name = user.first_name+" "+user.last_name;
+                    var message = "Congratulations "+name+", your question has been posted";
+                    var title = "New Question Posted";
+                    sendEmail(email,title,message);
                     return response.json({success:1, message:'Successfully created question', question:newQuestion})
                 }
             })
@@ -233,6 +287,26 @@ app.post('/leaveComment', function(request, response){
                         }
                         else{
                             //Successfully found question and pushed Comment
+                            var posterEmail=user.email;
+                            var name = user.first_name+" "+user.last_name;
+                            var message = "Congratulations "+name+", Your comment has been posted.";
+                            var title="Comment posted on Open Forum";
+                            sendEmail(posterEmail,title,message);
+                            User.findOne({_id:question.userID}, function(error,otheruser){
+                                if(error){
+                                    return response.json({success:-1, message:'Server error'}) 
+                                }else{
+                                    if(otheruser==null){
+                                        return response.json({success:0, message:'No user exists with this id'})
+                                    }else{
+                                        var email=otheruser.email;
+                                        var name = otheruser.first_name+" "+otheruser.last_name;
+                                        var message="Hello "+name+", there was a comment posted on one of your questions";
+                                        var title="Comment posted on your Open Forum";
+                                        sendEmail(email,title,message);
+                                    }
+                                }
+                            })
                             return response.json({success:1, message:'Successfully placed comment', comment:newComment})
                         }
                     })
