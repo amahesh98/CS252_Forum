@@ -47,6 +47,14 @@ export class SinglePostComponent implements OnInit {
     this.showReply=!this.showReply
   }
   fetchQuestion(){
+    if(localStorage.getItem('commentSuccess')!=null && localStorage.getItem('commentSuccess')=='true'){
+      this.showCommentSuccess=true
+      localStorage.removeItem('commentSuccess')
+    }
+    else{
+      this.showCommentSuccess=false
+    }
+    this.showCommentErr=false
     var questionObs=this._httpService.fetchSingleQuestion(this.questionID)
     questionObs.subscribe(data=>{
       if(data['success']==1){
@@ -70,12 +78,14 @@ export class SinglePostComponent implements OnInit {
       if(data['success']==1){
         this.showCommentErr=false;
         this.showCommentSuccess=true
+        localStorage.setItem('commentSuccess', 'true')
         this.commentText=''
         this.fetchQuestion()
         this.showCommentsFunc()
       }
       else{
         this.showCommentErr=true;
+        localStorage.setItem('commentErr', 'false')
       }
     })
   }
