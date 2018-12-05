@@ -1,12 +1,12 @@
 
 div.loginWrapper{
-    background: white;
+    background:rgb(243, 245, 255);
     padding-top:1px;
     padding-bottom:15%;
   }
   div.mainBox{
       background:maroon;
-      border-radius:5px;
+      border-radius:9px;
       width:450px;
       display:block;
       margin:auto;
