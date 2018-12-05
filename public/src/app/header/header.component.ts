@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit {
   }
 
   checkLoggedIn(){
-    if(this.str_showBar == 'false'){
+    if(this.str_showBar == 'false' || this.str_showBar == null){
       this.showBar = false;
     }else{
       this.showBar = true;
