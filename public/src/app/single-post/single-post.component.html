@@ -9,7 +9,7 @@
   </div> -->
   <div class='originalPost'>
       <p class='pTitle'>{{question.subject}}</p>
-      <p class='pName'>Posted by: <a href='#'>{{question.username}}</a></p>
+      <p class='pName'>Posted by: <a [routerLink]="['/user',question['userID']]">{{question.username}}</a></p>
       <p class='pDate'>{{question.createdAt | date}}</p>
       <p class='pDesc'>{{question.question}}</p>
       <a class='pNum' (click)="showCommentsFunc()">{{question.comments.length}} Comments</a>
@@ -29,7 +29,7 @@
     <p class='commentsHeader'>Comments</p>
     <p class='commentSuccess' *ngIf='showCommentSuccess'>{{commentSuccess}}</p>
     <div class='comment' *ngFor="let comment of question.comments">
-        <p class='cName'>Posted by: <a href='#'>{{comment.username}}</a></p>
+        <p class='cName'>Posted by: <a [routerLink]="['/user',comment['userID']]">{{comment.username}}</a></p>
         <p class='cDate'>{{comment.createdAt | date}} </p>
         <p class='cDesc'>{{comment.comment}}</p>
     </div>

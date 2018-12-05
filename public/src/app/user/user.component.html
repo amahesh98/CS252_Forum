@@ -14,10 +14,10 @@
     <p class='big'>POSTS</p>
     <div *ngIf=numOfQuestions class='posts'>
         <div class='post' *ngFor="let question of questions">
-            <a href='#' class='pTitle'>{{question['subject']}}</a>
-            <p class='pDate'>{{question['createdAt'] | date}}</p>
-            <p class='pDesc'>{{question['question']}}</p>
-            <a class='pNum' href='#'>{{question['comments']['length']}} Comments</a>
+            <a [routerLink]="['/question',question['_id']]" class='pTitle'>{{question['subject']}}</a>
+            <p [routerLink]="['/question',question['_id']]" class='pDate'>{{question['createdAt'] | date}}</p>
+            <p [routerLink]="['/question',question['_id']]" class='pDesc'>{{question['question']}}</p>
+            <a [routerLink]="['/question',question['_id']]" class='pNum' href='#'>{{question['comments']['length']}} Comments</a>
         </div>
     </div>
     <div *ngIf=!numOfQuestions class='posts'>
