@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "ng build --aot -prod"
   },
   "keywords": [
     "example",
@@ -20,6 +21,7 @@
     "mongoose": "^5.3.13",
     "nodemailer": "^4.7.0",
     "path": "^0.12.7",
-    "xoauth2": "^1.2.0"
+    "xoauth2": "^1.2.0",
+    "typescript": "~2.3.3"
   }
 }
