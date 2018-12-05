@@ -13,11 +13,13 @@ export class HeaderComponent implements OnInit {
   str_showBar:string;
   showDropdown:boolean
   category:string
+  userID:string;
   constructor(private _httpService:HttpService,private _router: Router) {
     this.user_name = localStorage.getItem('OF_UI_UN');
     this.str_showBar = localStorage.getItem('OF_LOG_I');
     this.showDropdown=false
     this.category=''
+    this.userID = localStorage.getItem('OF_UID');
   }
 
   ngOnInit() {

@@ -19,7 +19,7 @@
       </div>
       <div class='right'>
           <p>Welcome, {{user_name}}</p>
-          <button>Account</button>
+          <button [routerLink]="['/user',userID]">Account</button>
           <button (click)="logout()">Logout</button>
       </div>
     </div>
