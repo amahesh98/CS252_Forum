@@ -22,6 +22,8 @@
     "nodemailer": "^4.7.0",
     "path": "^0.12.7",
     "xoauth2": "^1.2.0",
-    "typescript": "~2.3.3"
+    "typescript": "~2.3.3",
+    "@angular/cli": "^6.1.1",
+    "@angular/compiler-cli": "^7.1.1"
   }
 }
