@@ -319,6 +319,7 @@ app.post('/leaveComment', function(request, response){
 app.all("*", function(request, response){
     return response.sendFile(path.resolve('./public/dist/public/index.html'))
 })
-app.listen(8000, function(){
+// app.listen(8000, function(){
+app.listen(process.env.PORT || 8888, function(){
     console.log("Listening on port 8000")
 })
